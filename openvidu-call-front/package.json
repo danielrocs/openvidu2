@@ -11,6 +11,7 @@
     "@angular/platform-browser-dynamic": "14.2.8",
     "@angular/router": "14.2.8",
     "core-js": "^3.26.0",
+    "nanoid": "^4.0.2",
     "openvidu-angular": "2.26.0",
     "rxjs": "7.5.7",
     "unique-names-generator": "^4.7.1",
