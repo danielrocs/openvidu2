@@ -6,6 +6,7 @@ import { AuthService } from 'src/app/services/auth.services';
 import { CallService } from 'src/app/services/call.service';
 import { animals, colors, Config, countries, names, uniqueNamesGenerator } from 'unique-names-generator';
 import packageInfo from '../../../../package.json';
+import { nanoid } from 'nanoid'
 
 @Component({
 	selector: 'app-home',
@@ -126,11 +127,14 @@ export class HomeComponent implements OnInit, OnDestroy {
 	}
 
 	private getRandomName(): string {
-		const configName: Config = {
-			dictionaries: [names, countries, colors, animals],
-			separator: '-',
-			style: 'lowerCase'
-		};
-		return uniqueNamesGenerator(configName).replace(/[^\w-]/g, '');
+		// const configName: Config = {
+		// 	dictionaries: [names, countries, colors, animals],
+		// 	separator: '-',
+		// 	style: 'lowerCase'
+		// };
+
+		//return uniqueNamesGenerator(configName).replace(/[^\w-]/g, '');
+
+		return nanoid();
 	}
 }
